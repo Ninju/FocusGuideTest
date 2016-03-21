@@ -8,12 +8,6 @@
 
 import UIKit
 
-class FocusableUIView: UIView {
-    override func canBecomeFocused() -> Bool {
-        return false
-    }
-}
-
 class MyCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         let label = UILabel(frame: frame)
@@ -42,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.layer.borderWidth = 1.0
         tableView.layer.borderColor = UIColor.blackColor().CGColor
 
-        let rightHandView = FocusableUIView(frame: CGRectMake(480, 0, 1920 - 480, 1080))
+        let rightHandView = UIView(frame: CGRectMake(480, 0, 1920 - 480, 1080))
 
         rightHandView.backgroundColor = UIColor.grayColor()
         rightHandView.layer.borderColor = UIColor.blackColor().CGColor
