@@ -10,11 +10,8 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
-        let label = UILabel(frame: frame)
-        label.text = "Hey"
         super.init(frame: frame)
         backgroundColor = UIColor.orangeColor()
-        addSubview(label)
     }
 
     required init?(coder aDecoder: NSCoder) {
