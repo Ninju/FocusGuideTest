@@ -8,17 +8,6 @@
 
 import UIKit
 
-class MyCollectionViewCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = UIColor.orangeColor()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
     private var rightHandFocusGuide = UIFocusGuide()
     private var insetButton : UIButton = UIButton()
@@ -47,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let collectionView = UICollectionView(frame: CGRectMake(50, 50, 1000, 500), collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.registerClass(MyCollectionViewCell.self, forCellWithReuseIdentifier: "ccell")
+        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellID")
         rightHandView.addSubview(collectionView)
 
         insetButton.frame = CGRectMake(500, 700, 300, 100)
@@ -132,7 +121,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ccell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellID", forIndexPath: indexPath)
+        cell.backgroundColor = UIColor.orangeColor()
         return cell
     }
 
