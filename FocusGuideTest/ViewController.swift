@@ -23,7 +23,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.layer.borderColor = UIColor.blackColor().CGColor
 
         let rightHandView = UIView(frame: CGRectMake(480, 0, 1920 - 480, 1080))
-
         rightHandView.backgroundColor = UIColor.grayColor()
         rightHandView.layer.borderColor = UIColor.blackColor().CGColor
         rightHandView.layer.borderWidth = 1.0
@@ -63,7 +62,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         view.addSubview(rightHandView)
         view.addSubview(tableView)
-
 
         view.addLayoutGuide(rightHandFocusGuide)
 
@@ -139,7 +137,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if (nextView.isDescendantOfView(collectionView)) {
             nextView.frame = CGRectOffset(nextView.frame, offsetX, offsetY)
         }
-
     }
 }
 
