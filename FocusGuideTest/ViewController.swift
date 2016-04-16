@@ -73,10 +73,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         rightHandFocusGuide.preferredFocusedView = insetButton
     }
 
-    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-        print("Did update focus")
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
