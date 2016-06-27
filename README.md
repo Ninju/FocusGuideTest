@@ -1,3 +1,12 @@
+# Outdated?
+
+It appears that this is now handled by a native property on UITableView and UICollectionView, although I haven't investigated.
+
+```Swift
+var remembersLastFocusedIndexPath: Bool
+```
+---------------------------------------
+
 # FocusGuideTest
 Focus back on the previously selected UITableViewCell.
 
